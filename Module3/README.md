@@ -31,4 +31,4 @@ python
 ## Strings as collections
 
 Use ` len()` to count the number of elements (characters) of the string
-Use `index()` notation (begins with `0`) to access individual elements of string
+Use `index()` notation (begins with `0`) to access individual elements of string. Ex: If you want to access the second element of a string use: string.`[1]`
