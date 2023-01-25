@@ -32,3 +32,5 @@ length = 10.5
 width = 5.21
 area = length * width
 print(f'The area of a rectangle with {length} length and {width} width is:{area}')
+# Now use .format()
+print('The area of a rectangle with {0} length and {1} width is:{2}'.format(length, width, area))
