@@ -33,4 +33,20 @@ width = 5.21
 area = length * width
 print(f'The area of a rectangle with {length} length and {width} width is:{area}')
 # Now use .format()
-print('The area of a rectangle with {0} length and {1} width is:{2}'.format(length, width, area))
+# Use {:f} for floating point notation
+print(f'The area of a rectangle with {0:f} length and {1:f} width is:{2:f}'.format(
+    length, width, area))
+# use {:.2f} for floating point notation, with 2 digits of pre.
+print('The area of a rectangle with {0:.3f} length and {1:.3f} width is:{2:.3f}'.format(
+    length, width, area))
+# Use {:6.2f} for floating point notation, with 6 digits width AND 2 digits of pre.
+print('The area of a rectangle width[{0:08.2f}] length and [{1:08.2f}] width is: [{2:08.2f}]'.format(length, width, area))
+
+# Use some string methods
+city = 'ogden'
+print(f'{city.capitalize()}') # only capitalize the first letter
+print(f'{city.upper()}') # All caps
+
+# Strings as collections
+school = 'Weber State University'
+print(f'The length of{school} is {len(school)} characters long')
