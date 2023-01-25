@@ -3,4 +3,4 @@
 ## Strings
 Is a collection of charcters
 
-use strings.
+Use String `.format()` Method
