@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+'''
+Task 1: Ask user to enter their favourite team
+Display it with the following format:
+%%%%%%%%%%%
+REAL MADRID
+%%%%%%%%%%%
+Here, '%' is the border character
+
+# Task 2: Now like this:
+%%%%%%%%%%%%%%%
+% REAL MADRID %
+%%%%%%%%%%%%%%%
+'''
+team = input('what is your favoutite team? ')
+border = '%'
+
+# Task 1
+print(border * len(team))
+print(team)
+print(border * len(team))
+
+# Task 2
+print(border * (len(team) + 4))
+print(team)
+print(border * (len(team) + 4))
