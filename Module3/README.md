@@ -32,3 +32,11 @@ python
 
 Use ` len()` to count the number of elements (characters) of the string
 Use `index()` notation (begins with `0`) to access individual elements of string. Ex: If you want to access the second element of a string use: string.`[1]`
+
+## Tuples
+
+Immutable sequence of arbitrary objects. Once created they cannot be replaced or removed, and new element cannot be added.
+
+```python
+tuple_name = (object1, object2, etc)
+```
