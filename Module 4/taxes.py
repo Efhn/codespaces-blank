@@ -18,6 +18,8 @@ if marital_status == 's':
     # TODO: Set rules
     if income <= RATE1_SINGLE_LIMIT:
         tax1 = RATE1 * income 
+    else:
+        pass  # TODO
 else:
     if icome <= RATE1_MARRIED_LIMIT
         tax1 = RATE1 * income
