@@ -2,6 +2,8 @@
 '''
 Calculate your income taxes
 '''
+import sys
+
 # Set tax rates
 RATE1 = 0.10
 RATE2 = 0.25
@@ -14,7 +16,7 @@ marital_status = input("Please enter 's' for single or 'm' for married: ")
 if marital_status != 's' or marital_status != 'm':
     print('Invalid input')
     print("Please enter 's' for single or 'm' for married: ")
-    exit(1)  # exit the program now
+    sys.exit(1)  # exit the program now. 1= 0 means error
 
 
 # Compute taxes
@@ -36,3 +38,5 @@ else:                                               # 'm' case
 # Calculate totals taxes
 total_taxes = tax1 + tax2
 print(f'Your total taxes are {total_taxes}')
+
+sys.exit(0)  # 0 means no error
