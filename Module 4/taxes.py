@@ -8,23 +8,31 @@ RATE2 = 0.25
 RATE1_SINGLE_LIMIT = 32000.0
 RATE1_MARRIED_LIMIT = RATE1_SINGLE_LIMIT * 2# double it
 # Take input
-income = float(input('Please enter your income'))
-marital_status = input('Please enter s for single pr m for married')
+income = float(input('Please enter your income: '))
+marital_status = input("Please enter 's' for single or 'm' for married: ")
+# Validate input
+if marital_status != 's' or marital_status != 'm':
+    print('Invalid input')
+    print("Please enter 's' for single or 'm' for married: ")
+    exit(1)  # exit the program now
+
+
 # Compute taxes
-tax1 = 0.0
-tax2 = 0.0
+tax1 = 0.0 # first rate
+tax2 = 0.0 # second rate
 
 if marital_status == 's':
-    # TODO: Set rules
     if income <= RATE1_SINGLE_LIMIT:
         tax1 = RATE1 * income 
     else:
-        pass  # TODO
-else:
-    if icome <= RATE1_MARRIED_LIMIT
+        tax1 = RATE1 * RATE1_SINGLE_POINT
+        tax2 = RATE2 * (income - RATE1_SINGLE_LIMIT)
+else:                                               # 'm' case
+    if income <= RATE1_MARRIED_LIMIT
         tax1 = RATE1 * income
         else:
-            pass  # TODO
+            tax1 = RATE1 * RATE1_MARRIED_LIMIT
+            tax2 = RATE2 * (income - RATE1_MARRIED_LIMIT)
 # Calculate totals taxes
 total_taxes = tax1 + tax2
 print(f'Your total taxes are {total_taxes}')
