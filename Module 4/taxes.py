@@ -11,13 +11,14 @@ RATE1_SINGLE_LIMIT = 32000.0
 RATE1_MARRIED_LIMIT = RATE1_SINGLE_LIMIT * 2# double it
 # Take input
 income = input('Please enter your income: ')
+
 # TODO: Validate input
-if income.isdecimal():
-    income = float(income)
+if type(income) == float or type(income) == int:
+    print('Valid input')
 else:
     print('Invalid input')
     print("Please enter a decimal value ")
-marital_status = input("Please enter 's' for single or 'm' for married: ")
+    sys.exit(2)  # exit the program now. != 0 means error
 # Validate input
 if marital_status != 's' or marital_status != 'm':
     print('Invalid input')
