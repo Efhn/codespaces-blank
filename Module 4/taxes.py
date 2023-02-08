@@ -20,7 +20,7 @@ else:
     print("Please enter a decimal value ")
     sys.exit(2)  # exit the program now. != 0 means error
 # Validate input
-if marital_status != 's' or marital_status != 'm':
+if MARITAL_STATUS != 's' or MARITAL_STATUS != 'm':
     print('Invalid input')
     print("Please enter 's' for single or 'm' for married: ")
     sys.exit(1)  # exit the program now. 1= 0 means error
