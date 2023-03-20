@@ -5,9 +5,9 @@ Module documentation
 import sys
 
 
-def apply_discount(percentage, *args, **kwargs):
-    total = sum(args)
-    discount = total*percentage/100
+def apply_discount(amt, *percentage, **kwargs):
+    total = sum(amt)
+    discount = total*percentage[0]/100
     return total - discount
 
 
@@ -21,7 +21,6 @@ def checkout(cart, *discount):
     discount_amount = discounts[1] # amount
     total = discount_type(total, discount_amount)
     return total
-
 
 def main():
     """
