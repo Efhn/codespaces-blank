@@ -7,11 +7,14 @@ tales.
 """
 import sys
 
-story = '''        Once upon a time, there was a [adjective]  [animal]
+story = '''Once upon a time, there was a [adjective]  [animal]
         who lives in a [place]. this [animal] loved to [verb] and was
         always [adverb] [verb]-ing. One day, the [animal] met a [adjective]
         [person] who [verb]ed [adverb]ly. They decided to [verb] together
         and had a [adjective] time!'''
+
+terms = {'adjective':'', 'animal':'', 'place':'',
+         'verb':'', 'adverb':''}
 
 def mad_libs(story):
     """This function takes a story and it will convert
@@ -20,14 +23,21 @@ def mad_libs(story):
     # Access by elements
     #for word in words:
     #    print(word)
-
+    terms= {}  # dictionary to save replacement
     # Access by index
     for index in range(len(words)):
-        if '[' in words[index] and ']' in words[index]
-        print(words[index])
-        
+        if '[' in words[index] and ']' in words[index]:
+            # prompt = words[index].strip('[\]')
+            prompt = words[index].replace('[', '')
+            prompt = prompt.replace(']', '')
+            if prompt not in terms:
+                replacement = input(f'Enter a {prompt}')
+                terms[prompt] = replacement
+                words[index] = replacement
+            else:
+                words[index] = terms[prompt]
 
-    new_story = ''
+    new_story = ' '.join(words)
     return new_story
 
 
