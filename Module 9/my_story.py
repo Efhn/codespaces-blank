@@ -7,19 +7,30 @@ tales.
 """
 import sys
 
-story = '''Once upon a time, there was a [adjective] [animal]
-who lived in a [place]. This [animal] loved to [verb] and was 
-always [adverb] [verb]-ing. One day, the [animal] met a [adjective]
-[person] who [verb]ed [adverb]ly. They decided to [verb] together
-and had [adjective] time!'''
-        '''Once upon a time, there was a white rabbit
-        who lived in a hole. this rabbit loved to play and was
-        always happily playing. One day, the rabbit met a small
-        kid who played frequently.
+story = '''        Once upon a time, there was a [adjective]  [animal]
+        who lives in a [place]. this [animal] loved to [verb] and was
+        always [adverb] [verb]-ing. One day, the [animal] met a [adjective]
+        [person] who [verb]ed [adverb]ly. They decided to [verb] together
+        and had a [adjective] time!'''
 
 def mad_libs(story):
+    """This function takes a story and it will convert
+    """
+    words = story.split()
+    # Access by elements
+    #for word in words:
+    #    print(word)
+
+    # Access by index
+    for index in range(len(words)):
+        if '[' in words[index] and ']' in words[index]
+        print(words[index])
+        
+
     new_story = ''
     return new_story
+
+
 def main():
     """
     Main Driver
